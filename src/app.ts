@@ -20,8 +20,6 @@ function startServer(){
 
 setImmediate(startServer);
 
-export default app;
-
 app.get('/api/index/:id', (req, res) => {
     console.log("req:", req.params)
     console.log("body:", req.body)
@@ -44,3 +42,5 @@ app.put('/api/update/:id', (req, res) => {
     console.log("body:", req.body)
     return res.status(200).json({message: req.body})
 })
+
+export default app;
