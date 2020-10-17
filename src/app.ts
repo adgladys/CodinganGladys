@@ -32,15 +32,16 @@ app.post('/api/create', (req, res) => {
     return res.status(200).json({message: req.body})
 })
 
-app.delete('/api/remove/:id', (req,res) => {
-    console.log("req:", req.params)
-    return res.status(200).json({message: "success!"})
-})
-
 app.put('/api/update/:id', (req, res) => {
     console.log("req:", req.params)
     console.log("body:", req.body)
     return res.status(200).json({message: req.body})
 })
+
+app.delete('/api/remove/:id', (req,res) => {
+    console.log("req:", req.params)
+    return res.status(200).json({message: "success!"})
+})
+
 
 export default app;
